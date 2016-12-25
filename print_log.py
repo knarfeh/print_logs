@@ -3,6 +3,8 @@
 
 import threading
 import time
+import sys
+import logging
 
 __author__ = "kanrfeh@outlook.com"
 
@@ -10,6 +12,12 @@ TOTAL = 0
 MAXTIME = 0
 MINTIME = 0
 EXCEPT = 0
+logger = logging.getLogger(name=__name__)
+logger.setLevel(logging.DEBUG)
+fh = logging.FileHandler("/var/log/mathilde/print_debug.log")
+ch = logging.StreamHandler()
+logger.addHandler(fh)
+logger.addHandler(ch)
 
 
 class PrintThread(threading.Thread):
@@ -29,16 +37,17 @@ class PrintThread(threading.Thread):
 
         try:
             start_time = time.time()
-            print("balabalabalabalabalabalabalabalabalabala")
-            print("balabalabalabalabalabalabalabalabalabala")
-            print("balabalabalabalabalabalabalabalabalabala")
-            print("balabalabalabalabalabalabalabalabalabala")
-            print("balabalabalabalabalabalabalabalabalabala")
-            print("balabalabalabalabalabalabalabalabalabala")
-            print("balabalabalabalabalabalabalabalabalabala")
-            print("balabalabalabalabalabalabalabalabalabala")
-            print("balabalabalabalabalabalabalabalabalabala")
-            print("balabalabalabalabalabalabalabalabalabala")
+            logger.debug("balabalabalabalabalabalabalabalabalabala")
+            logger.debug("balabalabalabalabalabalabalabalabalabala")
+            logger.debug("balabalabalabalabalabalabalabalabalabala")
+            logger.debug("balabalabalabalabalabalabalabalabalabala")
+            logger.debug("balabalabalabalabalabalabalabalabalabala")
+            logger.debug("balabalabalabalabalabalabalabalabalabala")
+            logger.debug("balabalabalabalabalabalabalabalabalabala")
+            logger.debug("balabalabalabalabalabalabalabalabalabala")
+            logger.debug("balabalabalabalabalabalabalabalabalabala")
+            logger.debug("balabalabalabalabalabalabalabalabalabala")
+            sys.stdout.flush()
             time_span = time.time() - start_time
 
             self.maxtime(time_span)
