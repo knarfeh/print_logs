@@ -47,16 +47,6 @@ class PrintThread(threading.Thread):
             print("balabalabalabalabalabalabalabalabalabala")
             print("balabalabalabalabalabalabalabalabalabala")
             print("balabalabalabalabalabalabalabalabalabala")
-            print("balabalabalabalabalabalabalabalabalabala")
-            print("balabalabalabalabalabalabalabalabalabala")
-            print("balabalabalabalabalabalabalabalabalabala")
-            print("balabalabalabalabalabalabalabalabalabala")
-            print("balabalabalabalabalabalabalabalabalabala")
-            print("balabalabalabalabalabalabalabalabalabala")
-            print("balabalabalabalabalabalabalabalabalabala")
-            print("balabalabalabalabalabalabalabalabalabala")
-            print("balabalabalabalabalabalabalabalabalabala")
-            print("balabalabalabalabalabalabalabalabalabala")
             sys.stdout.flush()
             time_span = time.time() - start_time
 
@@ -110,5 +100,7 @@ def test(thread_count):
 
 
 if __name__ == "__main__":
-    test(10000)
-    test = raw_input()
+    while True:
+        test(10000)
+        time.sleep(5)
+        print("\n\n\n")
