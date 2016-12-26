@@ -14,9 +14,9 @@ MINTIME = 0
 EXCEPT = 0
 logger = logging.getLogger(name=__name__)
 logger.setLevel(logging.DEBUG)
-fh = logging.FileHandler("/var/log/mathilde/print_debug.log")
+# fh = logging.FileHandler("/var/log/mathilde/print_debug.log")
 ch = logging.StreamHandler()
-logger.addHandler(fh)
+# logger.addHandler(fh)
 logger.addHandler(ch)
 
 
@@ -37,16 +37,26 @@ class PrintThread(threading.Thread):
 
         try:
             start_time = time.time()
-            logger.debug("balabalabalabalabalabalabalabalabalabala")
-            logger.debug("balabalabalabalabalabalabalabalabalabala")
-            logger.debug("balabalabalabalabalabalabalabalabalabala")
-            logger.debug("balabalabalabalabalabalabalabalabalabala")
-            logger.debug("balabalabalabalabalabalabalabalabalabala")
-            logger.debug("balabalabalabalabalabalabalabalabalabala")
-            logger.debug("balabalabalabalabalabalabalabalabalabala")
-            logger.debug("balabalabalabalabalabalabalabalabalabala")
-            logger.debug("balabalabalabalabalabalabalabalabalabala")
-            logger.debug("balabalabalabalabalabalabalabalabalabala")
+            print("balabalabalabalabalabalabalabalabalabala")
+            print("balabalabalabalabalabalabalabalabalabala")
+            print("balabalabalabalabalabalabalabalabalabala")
+            print("balabalabalabalabalabalabalabalabalabala")
+            print("balabalabalabalabalabalabalabalabalabala")
+            print("balabalabalabalabalabalabalabalabalabala")
+            print("balabalabalabalabalabalabalabalabalabala")
+            print("balabalabalabalabalabalabalabalabalabala")
+            print("balabalabalabalabalabalabalabalabalabala")
+            print("balabalabalabalabalabalabalabalabalabala")
+            print("balabalabalabalabalabalabalabalabalabala")
+            print("balabalabalabalabalabalabalabalabalabala")
+            print("balabalabalabalabalabalabalabalabalabala")
+            print("balabalabalabalabalabalabalabalabalabala")
+            print("balabalabalabalabalabalabalabalabalabala")
+            print("balabalabalabalabalabalabalabalabalabala")
+            print("balabalabalabalabalabalabalabalabalabala")
+            print("balabalabalabalabalabalabalabalabalabala")
+            print("balabalabalabalabalabalabalabalabalabala")
+            print("balabalabalabalabalabalabalabalabalabala")
             sys.stdout.flush()
             time_span = time.time() - start_time
 
@@ -101,3 +111,4 @@ def test(thread_count):
 
 if __name__ == "__main__":
     test(10000)
+    test = raw_input()
