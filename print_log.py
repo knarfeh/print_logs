@@ -14,10 +14,10 @@ MINTIME = 0
 EXCEPT = 0
 logger = logging.getLogger(name=__name__)
 logger.setLevel(logging.DEBUG)
-# fh = logging.FileHandler("/var/log/mathilde/print_debug.log")
-ch = logging.StreamHandler()
-# logger.addHandler(fh)
-logger.addHandler(ch)
+fh = logging.FileHandler("/var/log/mathilde/print_debug.log")
+#ch = logging.StreamHandler()
+logger.addHandler(fh)
+#logger.addHandler(ch)
 
 
 class PrintThread(threading.Thread):
@@ -37,16 +37,7 @@ class PrintThread(threading.Thread):
 
         try:
             start_time = time.time()
-            print("balabalabalabalabalabalabalabalabalabala")
-            print("balabalabalabalabalabalabalabalabalabala")
-            print("balabalabalabalabalabalabalabalabalabala")
-            print("balabalabalabalabalabalabalabalabalabala")
-            print("balabalabalabalabalabalabalabalabalabala")
-            print("balabalabalabalabalabalabalabalabalabala")
-            print("balabalabalabalabalabalabalabalabalabala")
-            print("balabalabalabalabalabalabalabalabalabala")
-            print("balabalabalabalabalabalabalabalabalabala")
-            print("balabalabalabalabalabalabalabalabalabala")
+            logger.debug("lalalala")
             sys.stdout.flush()
             time_span = time.time() - start_time
 
@@ -101,6 +92,6 @@ def test(thread_count):
 
 if __name__ == "__main__":
     while True:
-        test(10000)
-        time.sleep(5)
+        test(1)
+        time.sleep(10)
         print("\n\n\n")
